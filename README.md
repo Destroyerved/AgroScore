@@ -1,5 +1,10 @@
 AgroScore 
 
+REVOLUTIONIZING FARMER CREDIT EVALUATION WITH NON-TRADITIONAL DATA
+
+AN INCLUSIVE CREDIT SCORING SYSTEM FOR FARMERS IN INDIA
+
+Problem Statement: Alternative Credit Evaluation Tool for Farmers
 Created by team Code rizzlers 
 Team Leader Ved Sharma
 Members - Yug Gandhi , Ubaid khan 

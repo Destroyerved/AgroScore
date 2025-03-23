@@ -1,0 +1,413 @@
+/* Main Color Palette */
+:root {
+    --primary-green: #00712D;
+    --light-green: #D5ED9F;
+    --cream: #FFFBE6;
+    --orange: #FF9100;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo i {
+    font-size: 2.5rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, #004d1f 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0 0 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+/* Main Container */
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    gap: 1rem;
+    height: calc(100vh - 250px);
+    min-height: 600px;
+}
+
+/* Side Panels */
+.side-panel {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.left-info, .right-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Map Section */
+.map-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex-grow: 1;
+    aspect-ratio: 1;
+    height: 100%;
+}
+
+/* Panel Headers */
+.panel-header {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.panel-content {
+    padding: 1rem;
+    overflow-y: auto;
+    height: calc(100% - 60px);
+}
+
+/* Map Container */
+#map {
+    height: calc(100% - 60px);
+    width: 100%;
+}
+
+/* Controls Panel */
+.controls-panel {
+    background-color: var(--light-green);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Clear All Button */
+.btn {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn:hover {
+    background-color: #005c24;
+}
+
+/* Total Area Card */
+.total-area-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.area-icon {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.area-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.area-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.area-value {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Remove old styles */
+.total-area-section,
+.area-stat,
+.stat-content {
+    display: none;
+}
+
+/* Search Box */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--light-green);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--light-green);
+    border-radius: 8px;
+    margin-top: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.search-result-item {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--light-green);
+    transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+    background-color: var(--light-green);
+}
+
+/* Measurements List */
+#measurements-list {
+    margin-top: 1rem;
+}
+
+.measurement-item {
+    background-color: white;
+    border: 1px solid var(--light-green);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.measurement-main-content {
+    cursor: pointer;
+}
+
+.measurement-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-green);
+    display: none;
+}
+
+/* Weather Info */
+.weather-info {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.weather-info strong {
+    color: var(--primary-green);
+}
+
+/* Scores Display */
+.score-display {
+    background-color: var(--light-green);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.score-display strong {
+    color: var(--primary-green);
+}
+
+/* Toggle Details */
+.toggle-details {
+    color: var(--primary-green);
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-icon {
+    transition: transform 0.2s;
+}
+
+/* Delete Button */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 68, 68, 0.1);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #005c24;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .main-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .side-panel {
+        width: 100%;
+        height: 300px;
+    }
+
+    .map-section {
+        width: 100%;
+        height: 80vw;
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .hero {
+        padding: 1.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+} 
